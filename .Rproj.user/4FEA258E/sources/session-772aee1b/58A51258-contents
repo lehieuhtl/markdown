@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 Bold Text with double asterisks **Bold UP**
 Italicize with single asterisks *Italicize*
 
-```{r import-data}
+```{r import-data, echo = FALSE, warning = FALSE, message = FALSE}
 #Load in
 library(tidyverse)
 library(rstatix)
@@ -25,12 +25,21 @@ sat_data = read.csv('SAT.csv')
 
 # Number of cases
 n_rows = nrow(sat_data)
+
+# Run anova on reading by state
+anova_test(data = sat_data,
+           dv = reading,
+           between = state)
+
+result = anova_test(data = sat_data,
+           dv = reading,
+           between = state)
 ```
 
 
 # SAT Math and Reading Scores by State
 
-We are analyzing a dataset that has math and reading SAT scores in three states. There are `r n_rows` in our data
+We are analyzing a dataset that has math and reading SAT scores in three states. There are `r n_rows` observations in our data. We are interested in whether there are differences
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
