@@ -1,7 +1,7 @@
 {
     "id": "7EFF94FC",
-    "path": null,
-    "project_path": null,
+    "path": "~/Desktop/Fall23/AdvTopCog/markdown/Markdown.R",
+    "project_path": "Markdown.R",
     "type": "r_source",
     "hash": "0",
     "contents": "",
@@ -15,11 +15,11 @@
         "Source": "Source"
     },
     "folds": "",
-    "lastKnownWriteTime": 5043023884808982018,
-    "encoding": "",
+    "lastKnownWriteTime": 1699987633,
+    "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1699987516021,
+    "last_content_update": 1699987633547,
     "read_only": false,
     "read_only_alternatives": []
 }
