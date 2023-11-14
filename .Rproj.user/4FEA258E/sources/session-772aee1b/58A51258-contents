@@ -16,12 +16,13 @@ knitr::opts_chunk$set(echo = TRUE)
 Bold Text with double asterisks **Bold UP**
 Italicize with single asterisks *Italicize*
 
-```{r import-data, echo = FALSE, warning = FALSE, message = FALSE}
+```{r import-data, echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
 #Load in
 library(tidyverse)
 library(rstatix)
 # Import the data
 sat_data = read.csv('SAT.csv')
+
 
 # Number of cases
 n_rows = nrow(sat_data)
@@ -47,7 +48,21 @@ es = result$ges[1]
 
 # SAT Math and Reading Scores by State
 
-We are analyzing a dataset that has math and reading SAT scores in three states. There are `r n_rows` observations in our data. We are interested in whether there are differences
+We are analyzing a dataset that has math and reading SAT scores in three states. There are `r n_rows` observations in our data. We are interested in whether there are differences between states in the avg math and reading scores on SAT. To test for these diff we ran a one-way ANOVA on reading scores with state (Minnesota, Maryland, and Texas) as the independent variable. This anova yielded a sig effect of state on reading scores, 
+*F*(`r df_n`, `r df_d`) = `r f`, *p* < 0.001, $\eta$^2^ = `r es`.
+
+```{r plot, echo = FALSE, warning = FALSE, message = FALSE}
+#Summarize data
+reading_by_state = sat_data %>%
+  group_by(state) %>%
+  summarize(mean_reading = mean(reading))
+
+#Plot it
+ggplot(data = reading_by_state, aes(x = state, y = mean_reading,
+                                    fill = state)) +
+  geom_bar(stat = 'identity', color = 'black')
+```
+
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
