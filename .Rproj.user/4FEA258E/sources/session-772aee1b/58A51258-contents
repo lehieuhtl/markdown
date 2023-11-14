@@ -30,10 +30,18 @@ n_rows = nrow(sat_data)
 anova_test(data = sat_data,
            dv = reading,
            between = state)
-
+#Save the output of ANOVA
 result = anova_test(data = sat_data,
            dv = reading,
            between = state)
+
+#Save individual stats
+f = result$F[1]
+df_n = result$DFn[1]
+df_d = result$DFd[1]
+p = result$p[1]
+es = result$ges[1]
+
 ```
 
 
