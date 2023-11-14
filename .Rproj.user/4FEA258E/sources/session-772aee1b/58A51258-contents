@@ -2,7 +2,10 @@
 title: "R.Markdown"
 author: "Hieu T. Le"
 date: "`r Sys.Date()`"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -20,6 +23,8 @@ Italicize with single asterisks *Italicize*
 #Load in
 library(tidyverse)
 library(rstatix)
+library(tinytex)
+library(latexpdf)
 # Import the data
 sat_data = read.csv('SAT.csv')
 
