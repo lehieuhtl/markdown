@@ -365,6 +365,37 @@ display: none;
 <h4>Even Smaller</h4>
 <p>Bold Text with double asterisks <strong>Bold UP</strong> Italicize
 with single asterisks <em>Italicize</em></p>
+<pre class="r"><code>#Load in
+library(tidyverse)</code></pre>
+<pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+## ✔ dplyr     1.1.3     ✔ readr     2.1.4
+## ✔ forcats   1.0.0     ✔ stringr   1.5.0
+## ✔ ggplot2   3.4.4     ✔ tibble    3.2.1
+## ✔ lubridate 1.9.3     ✔ tidyr     1.3.0
+## ✔ purrr     1.0.2     
+## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()
+## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<pre class="r"><code>library(rstatix)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;rstatix&#39;
+## 
+## The following object is masked from &#39;package:stats&#39;:
+## 
+##     filter</code></pre>
+<pre class="r"><code># Import the data
+sat_data = read.csv(&#39;SAT.csv&#39;)
+
+# Number of cases
+n_rows = nrow(sat_data)</code></pre>
+</div>
+</div>
+</div>
+<div id="sat-math-and-reading-scores-by-state" class="section level1">
+<h1>SAT Math and Reading Scores by State</h1>
+<p>We are analyzing a dataset that has math and reading SAT scores in
+three states. There are 150 in our data</p>
 <p>This is an R Markdown document. Markdown is a simple formatting
 syntax for authoring HTML, PDF, and MS Word documents. For more details
 on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
@@ -380,9 +411,6 @@ chunk like this:</p>
 ##  Mean   :15.4   Mean   : 42.98  
 ##  3rd Qu.:19.0   3rd Qu.: 56.00  
 ##  Max.   :25.0   Max.   :120.00</code></pre>
-</div>
-</div>
-</div>
 <div id="including-plots" class="section level2">
 <h2>Including Plots</h2>
 <p>You can also embed plots, for example:</p>
@@ -390,6 +418,7 @@ chunk like this:</p>
 <p>Note that the <code>echo = FALSE</code> parameter was added to the
 code chunk to prevent printing of the R code that generated the
 plot.</p>
+</div>
 </div>
 
 

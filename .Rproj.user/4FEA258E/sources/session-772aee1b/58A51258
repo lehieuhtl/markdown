@@ -3,7 +3,7 @@
     "path": "~/Desktop/Fall23/AdvTopCog/markdown/Rmrkdwn.Rmd",
     "project_path": "Rmrkdwn.Rmd",
     "type": "r_markdown",
-    "hash": "4098877100",
+    "hash": "1487030818",
     "contents": "",
     "dirty": false,
     "created": 1699987613030.0,
@@ -13,15 +13,16 @@
         "tempName": "Untitled2",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "16,43",
-        "scrollLine": "5"
+        "cursorPosition": "32,113",
+        "scrollLine": "20",
+        "last_setup_crc32": "772aee1bbb338d19"
     },
     "folds": "",
-    "lastKnownWriteTime": 1699988362,
+    "lastKnownWriteTime": 1699988659,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1699988362467,
+    "last_content_update": 1699988659579,
     "read_only": false,
     "read_only_alternatives": []
 }

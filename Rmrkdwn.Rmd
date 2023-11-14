@@ -16,6 +16,22 @@ knitr::opts_chunk$set(echo = TRUE)
 Bold Text with double asterisks **Bold UP**
 Italicize with single asterisks *Italicize*
 
+```{r import-data}
+#Load in
+library(tidyverse)
+library(rstatix)
+# Import the data
+sat_data = read.csv('SAT.csv')
+
+# Number of cases
+n_rows = nrow(sat_data)
+```
+
+
+# SAT Math and Reading Scores by State
+
+We are analyzing a dataset that has math and reading SAT scores in three states. There are `r n_rows` in our data
+
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
